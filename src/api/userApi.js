@@ -2,10 +2,7 @@ import axios from "axios";
 
 const BASE = import.meta.env.VITE_USER_API;
 
-/**
- * Get all users (for chat user list)
- * GET /api/users
- */
+
 export const getUsersApi = async (token) => {
   const res = await axios.get(
     `${BASE}`,
@@ -18,10 +15,7 @@ export const getUsersApi = async (token) => {
   return res.data;
 };
 
-/**
- * Get user basic info (for group chat)
- * GET /api/users/:id
- */
+
 export const getUserProfileApiForGroupChat = async (token, userId) => {
   const res = await axios.get(
     `${BASE}/${userId}`,

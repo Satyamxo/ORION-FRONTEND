@@ -51,13 +51,7 @@ export const markPrivateMessagesReadApi = async (token, userId) => {
   );
 };
 
-/**
- * 🔹 Get PRIVATE CHAT SUMMARY
- * Used for:
- * - unread message count
- * - last message
- * - sorting chat list
- */
+
 export const getPrivateChatSummaryApi = async (token) => {
   const res = await axios.get(
     `${API_URL}/private/summary`,
