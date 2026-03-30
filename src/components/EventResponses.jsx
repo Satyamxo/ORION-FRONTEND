@@ -14,7 +14,7 @@ const EventResponses = ({ eventId, refreshKey }) => {
         setLoading(true);
 
         const res = await axios.get(
-          `${import.meta.env.VITE_EVENT_API}/api/events/${eventId}`,
+          `${import.meta.env.VITE_EVENT_API}/${eventId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
