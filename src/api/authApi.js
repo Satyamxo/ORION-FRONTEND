@@ -3,10 +3,8 @@ import { jwtDecode } from "jwt-decode";
 
 const BASE = import.meta.env.VITE_AUTH_API;
 
-/**
- * Login user
- * POST /api/auth/login
- */
+
+
 export const loginApi = async (data) => {
   const res = await axios.post(
     `${BASE}/login`,
